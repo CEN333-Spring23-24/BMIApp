@@ -1,0 +1,21 @@
+<m-container>
+    <br>
+    <br>
+    <h1>What is the BMI?</h1>
+    <p>Body Mass Index (BMI) is a person’s weight in kilograms divided by the square of height in meters. A high BMI can indicate high body fatness. BMI screens for weight categories that may lead to health problems, but it does not diagnose the body fatness or health of an individual.</p>
+    
+    
+    <div *ngIf="show">
+        <p>Body mass index (BMI) is a person’s weight in kilograms divided by the square of height in meters. It is an inexpensive and easy way to screen for weight categories that may lead to health problems. For children and teens, BMI is age- and sex-specific and is often referred to as BMI-for-age.
+        Regardless of the current BMI-for-age category, help your child or teen develop healthy weight habits and talk with your doctor or other healthcare provider as part of ongoing tracking of BMI-for-age. If your child has significant weight loss or gain, he or she should be referred to and guided by a doctor or other healthcare provider.
+        Tracking growth patterns over time can help you make sure your child is achieving or maintaining a healthy weight. A single BMI-for-age calculation is not enough to evaluate long-term weight status because your child’s height and weight will change as they grow. With individuals, health care providers should consider BMI along with other factors such as family history, blood pressure, blood sugar levels, and eating patterns and physical activity level.</p>
+        <m-card *ngFor="let professor of listOfProfessors"
+        [header]="professor.name" 
+        [subheader]="professor.job" 
+        [imageurl]="professor.image">
+            {{professor.courses}}
+        </m-card>
+    </div>
+    <button class="pure-button" (click)="showMore()">{{buttonFace}}</button>
+  
+</m-container>
